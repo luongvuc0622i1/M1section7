@@ -2,12 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ứng dụng máy tính</title>
 </head>
 <body>
+<input type="number" id="firstnum" placeholder="Nhập số thứ nhất">
+<input type="number" id="secondnum" placeholder="Nhập số thứ hai">
+<br>
+<button onclick="Add()">Cộng (+)</button>
+<button onclick="Sub()">Trừ (-)</button>
+<button onclick="Mul()">Nhân (*)</button>
+<button onclick="Div()">Chia (/)</button>
+<br>
+<div id="result">Kết quả</div>
 
 <script>
-
+function Add() {
+    let num1 = document.getElementById("firstnum").value;
+    let num2 = document.getElementById("secondnum").value;
+    let result = Number(num1) + Number(num2);
+    document.getElementById("result").innerHTML = result;
+}
+function Sub() {
+    let num1 = document.getElementById("firstnum").value;
+    let num2 = document.getElementById("secondnum").value;
+    let result = Number(num1) - Number(num2);
+    document.getElementById("result").innerHTML = result;
+}
+function Mul() {
+    let num1 = document.getElementById("firstnum").value;
+    let num2 = document.getElementById("secondnum").value;
+    let result = Number(num1) * Number(num2);
+    document.getElementById("result").innerHTML = result;
+}
+function Div() {
+    let num1 = document.getElementById("firstnum").value;
+    let num2 = document.getElementById("secondnum").value;
+    let result = Number(num1) / Number(num2);
+    document.getElementById("result").innerHTML = result;
+}
 </script>
 </body>
 </html>
